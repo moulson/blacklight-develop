@@ -1,0 +1,28 @@
+﻿@model BlackLight.Recruitment.MVC.Models.ContactUsViewModel
+
+<h2>Contact</h2>
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.LabelFor(x => x.Name)
+        @Html.TextBoxFor(x => x.Name)
+        @Html.ValidationMessageFor(x => x.Name)
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Email)
+        @Html.TextBoxFor(x => x.Email)
+        @Html.ValidationMessageFor(x => x.Email)
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Message)
+        @Html.TextAreaFor(x => x.Message)
+        @Html.ValidationMessageFor(x => x.Message)
+    </div>
+
+    <button type="submit">Send</button>
+
+}
